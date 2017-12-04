@@ -71,7 +71,7 @@
       assert.equal(tab[3].innerHTML,"Mails");
       assert.equal(tab[4].innerHTML,"Tags");
       assert.equal(tab[5].innerHTML,"Actions");
-      assert.ok(false);
+
       });
 
       QUnit.test("list tests", function (assert) {
@@ -103,7 +103,17 @@
       });
 
       QUnit.test("remove contact tests", function (assert) {
-        assert.ok(false);
+        var tab = $('table tbody td');
+          tab[0].click();
+          var liste = Contact.Contacts.instance();
+          var i = liste.iterator();
+          var j = 0;
+          var tab = $('table tbody td');
+          while (i.hasNext()){
+              var val = i.next();
+              j+=1
+          }
+        assert.equal(j,3)
       });
 
       QUnit.test("sort contact tests", function (assert) {

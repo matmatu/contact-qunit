@@ -64,7 +64,14 @@
     <!-- BEGIN - Les tests -->
     <script>
       QUnit.test("header tests", function (assert) {
-        assert.ok(false);
+	  
+	  assert.equal(tab[0].innerHTML,"First name");
+      assert.equal(tab[1].innerHTML,"Last name");
+      assert.equal(tab[2].innerHTML,"Phones");
+      assert.equal(tab[3].innerHTML,"Mails");
+      assert.equal(tab[4].innerHTML,"Tags");
+      assert.equal(tab[5].innerHTML,"Actions");
+      assert.ok(false);
       });
 
       QUnit.test("list tests", function (assert) {
